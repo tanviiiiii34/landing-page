@@ -1,0 +1,103 @@
+<section id="contact" class="py-24 bg-gradient-to-b from-dark to-black relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div
+        class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl transform translate-x-1/2 -translate-y-1/2">
+    </div>
+    <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full filter blur-3xl transform -translate-x-1/2 translate-y-1/2">
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row gap-16">
+
+            <!-- Text Content -->
+            <div class="w-full lg:w-5/12">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                    Get In <span class="text-primary">Touch</span>
+                </h2>
+                <div class="w-24 h-1 bg-primary mb-8"></div>
+                <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                    Ready to experience luxury living? Schedule a private viewing or speak with our sales team to find
+                    your perfect home.
+                </p>
+
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Visit Us</h3>
+                            <p class="text-gray-400">Estate Residency<br>Baner Road, Pune, Maharashtra 411045<br>India
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Call Us</h3>
+                            <p class="text-gray-400">+91 98765 43210</p>
+                            <p class="text-gray-400">+91 20 1234 5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="w-full lg:w-7/12">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"
+                    class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl shadow-2xl">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-400 text-sm mb-2 ml-1">Your Name</label>
+                            <input type="text" formControlName="name"
+                                class="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary focus:bg-black/40 transition-all placeholder-gray-600"
+                                placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 text-sm mb-2 ml-1">Your Email</label>
+                            <input type="email" formControlName="email"
+                                class="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary focus:bg-black/40 transition-all placeholder-gray-600"
+                                placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-400 text-sm mb-2 ml-1">Subject</label>
+                        <input type="text" formControlName="subject"
+                            class="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary focus:bg-black/40 transition-all placeholder-gray-600"
+                            placeholder="I'm interested in a 3BHK Apartment">
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="block text-gray-400 text-sm mb-2 ml-1">Message</label>
+                        <textarea formControlName="message" rows="4"
+                            class="w-full bg-black/20 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary focus:bg-black/40 transition-all placeholder-gray-600 resize-none"
+                            placeholder="Tell us more about your requirements..."></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-gradient-to-r from-primary to-yellow-600 text-dark font-bold text-lg py-4 rounded-xl shadow-[0_10px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.5)] transform hover:-translate-y-1 transition-all duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles for Smoothness */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-900 text-white font-sans antialiased overflow-x-hidden;
+}

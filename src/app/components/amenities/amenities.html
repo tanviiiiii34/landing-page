@@ -1,0 +1,80 @@
+<section id="amenities" class="py-20 bg-dark relative overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+
+            <!-- Left Content -->
+            <div class="w-full lg:w-1/2">
+                <div class="mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">
+                        World-Class <span class="text-primary">Amenities</span>
+                    </h2>
+                    <div class="w-24 h-1 bg-primary"></div>
+                    <p class="text-gray-400 mt-4 text-lg">
+                        Designed for those who seek the extraordinary in every moment.
+                    </p>
+                </div>
+
+                <!-- Amenities Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div *ngFor="let amenity of amenities"
+                        class="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] group hover:-translate-y-1">
+
+                        <!-- Icon -->
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    [attr.d]="amenity.svg"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold text-white mb-2">
+                            {{ amenity.title }}
+                        </h3>
+
+                        <!-- Description -->
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            {{ amenity.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Auto Image Slider -->
+            <div class="w-full lg:w-1/2 order-last lg:order-none mt-8 lg:mt-0">
+                <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group cursor-pointer h-[500px] lg:h-[700px]">
+
+                    <!-- 🔥 Auto Changing Amenities Images -->
+                    <img *ngFor="let img of amenityImages; let i = index" [src]="img" alt="Luxury Amenities"
+                        loading="lazy"
+                        class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
+                        [ngClass]="{
+                            'opacity-100 scale-105 z-10': currentImageIndex === i,
+                            'opacity-0 scale-100 z-0': currentImageIndex !== i
+                        }">
+
+                    <!-- Dark Gradient Overlay -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500">
+                    </div>
+
+                    <!-- Text Overlay -->
+                    <div
+                        class="absolute bottom-8 left-8 right-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span
+                            class="inline-block px-4 py-1 bg-primary text-dark text-xs font-bold uppercase tracking-widest rounded-full mb-3">
+                            Premium Lifestyle
+                        </span>
+                        <h3 class="text-3xl font-bold text-white">
+                            Experience Unmatched Luxury Amenities
+                        </h3>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
