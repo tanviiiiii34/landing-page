@@ -12,7 +12,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class LocationComponent implements OnInit {
   mapUrl: SafeResourceUrl | undefined;
 
-  // Clean Google Maps Embed URL for Baner, Pune
+
   private rawMapUrl = 'https://www.google.com/maps?q=Baner%20Pune%20Maharashtra&output=embed';
 
   constructor(private sanitizer: DomSanitizer) { }

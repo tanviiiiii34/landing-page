@@ -10,12 +10,12 @@ import { CommonModule } from '@angular/common';
 })
 export class AmenitiesComponent implements OnInit, OnDestroy {
 
-  // 🔥 Auto-changing images for right side (Premium Real Estate Style)
+
   amenityImages: string[] = [
-    'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1000', // Pool
-    'https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&q=80&w=1000', // Gym
-    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=1000', // Garden
-    'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=1000'  // Clubhouse
+    'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1000',
+    'https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&q=80&w=1000',
+    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=1000',
+    'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&q=80&w=1000'
   ];
 
   currentImageIndex: number = 0;
@@ -74,6 +74,6 @@ export class AmenitiesComponent implements OnInit, OnDestroy {
     this.imageInterval = setInterval(() => {
       this.currentImageIndex =
         (this.currentImageIndex + 1) % this.amenityImages.length;
-    }, 3500); // changes every 3.5 seconds
+    }, 3500);
   }
 }

@@ -4,7 +4,7 @@
     'bg-transparent py-4': !isScrolled
   }">
   <div class="container mx-auto px-6 h-16 flex items-center justify-between">
-    <!-- Logo -->
+
     <a (click)="scrollToSection('home')" class="cursor-pointer flex items-center gap-2 group">
       <div
         class="w-8 h-8 bg-primary rounded-br-lg rounded-tl-lg group-hover:rotate-45 transition-transform duration-300">
@@ -14,7 +14,7 @@
       </span>
     </a>
 
-    <!-- Desktop Menu -->
+
     <div class="hidden md:flex items-center space-x-8">
       <a *ngFor="let item of navItems" (click)="scrollToSection(item.section)"
         class="cursor-pointer text-sm uppercase tracking-wide text-gray-300 hover:text-primary transition-colors duration-300 relative group py-2">
@@ -46,7 +46,7 @@
       </button>
     </div>
 
-    <!-- Mobile Menu Button -->
+
     <button (click)="toggleMobileMenu()" class="md:hidden text-white focus:outline-none">
       <svg *ngIf="!isMobileMenuOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,7 @@
     </button>
   </div>
 
-  <!-- Mobile Menu Dropdown -->
+
   <div
     class="md:hidden bg-dark/95 backdrop-blur-xl absolute top-16 left-0 w-full overflow-hidden transition-all duration-300 ease-in-out border-b border-white/10"
     [ngStyle]="{ 'max-height': isMobileMenuOpen ? '400px' : '0' }">

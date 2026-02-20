@@ -10,7 +10,7 @@
             </p>
         </div>
 
-        <!-- Responsive Grid: 1 col mobile, 2 col tablet, 3 col desktop -->
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div *ngFor="let img of galleryImages"
                 class="relative group overflow-hidden rounded-xl cursor-pointer h-64 shadow-lg"
@@ -19,7 +19,7 @@
                 <img [src]="img" alt="Property Image" loading="lazy"
                     class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
 
-                <!-- Hover Overlay -->
+
                 <div
                     class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <!-- Lightbox Modal -->
+
     <div *ngIf="selectedImage"
         class="fixed inset-0 z-[70] bg-black/95 flex items-center justify-center p-4 animate-fade-in"
         (click)="closeLightbox()">
